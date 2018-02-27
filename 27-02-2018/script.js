@@ -22,7 +22,7 @@ calculate.addEventListener("click",function(){
         var date = new Date(); // Hazirki gunun degeri goturmek ucun yeni Date yaratdiq 
         var bodytr = document.createElement("tr");  //table bodysinde rowlar yaradiq(dongunun sayi qeder);
         var td = document.createElement("td"); //yeni rowa qiymetin gosterilmesi ucun td (yəni columnlar) yartiq
-        td.innerText = (totalPrice-firstPay)/amount; // qiymetin gosterilmesi ucun olan td-nin textini dustura esasen yazdirq
+        td.innerText = (totalPrice-firstPay)/amount + " AZN"; // qiymetin gosterilmesi ucun olan td-nin textini dustura esasen yazdirq
         var td1 = document.createElement("td"); //yeni rowa tarixin gosterilmesi ucun td (yəni columnlar) yartiq
         date.setMonth(date.getMonth()+(i+1)) // Hal hazirki gunun yeni deyeri olarq (halhazirki gunun deyeri uzerine gelinsin i+1 geldik)
         td1.innerText = date.getDate()+"-"+months[date.getMonth()]+"-"+date.getFullYear();   // tarixin gosterilmesi ucun olan td-nin textini dustura esasen yazdirq
