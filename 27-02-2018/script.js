@@ -1,5 +1,6 @@
 var tableContent = document.querySelector(".tableContent");
 var calculate = document.querySelector(".calculate");
+var months = ["Yanvar","Fevral","Mart","Aprel","May","Iyun","Iyul","Avqust","Sentyabr","Oktyabr","Noyabr","Dekabr"]
 calculate.addEventListener("click",function(){
     tableContent.innerHTML=""; // Kontentin icin bosalt
     var totalPrice = document.querySelector(".totalPrice").value; // Toplam odenis deyeri
@@ -24,7 +25,7 @@ calculate.addEventListener("click",function(){
         td.innerText = (totalPrice-firstPay)/amount; // qiymetin gosterilmesi ucun olan td-nin textini dustura esasen yazdirq
         var td1 = document.createElement("td"); //yeni rowa tarixin gosterilmesi ucun td (yəni columnlar) yartiq
         date.setMonth(date.getMonth()+(i+1)) // Hal hazirki gunun yeni deyeri olarq (halhazirki gunun deyeri uzerine gelinsin i+1 geldik)
-        td1.innerText = date.getDate()+"-"+date.getMonth()+"-"+date.getFullYear();   // tarixin gosterilmesi ucun olan td-nin textini dustura esasen yazdirq
+        td1.innerText = date.getDate()+"-"+months[date.getMonth()]+"-"+date.getFullYear();   // tarixin gosterilmesi ucun olan td-nin textini dustura esasen yazdirq
         bodytr.appendChild(td); //yeni yaratdigimiz rowa  yeni td columunu(odenis meblegini) ovlad verdik
         bodytr.appendChild(td1);//yeni yaratdigimiz rowa  yeni td columunu (odenisi tarixini) ovlad verdik
         table.appendChild(bodytr); //Yeni rowlari da tabla ovlad verdik
